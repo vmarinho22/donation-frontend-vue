@@ -1,3 +1,3 @@
 <template>
-  <p>sign-up page</p>
+  <p>sign-up page {{$t('test')}}</p>
 </template>
