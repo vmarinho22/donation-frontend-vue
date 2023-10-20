@@ -1,3 +1,7 @@
+import pages from './pages'
+import buttons from './buttons'
+
 export default {
-  'test': 'Está funcionando!'
+  pages,
+  buttons
 }
