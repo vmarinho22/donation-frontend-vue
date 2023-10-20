@@ -1,7 +1,7 @@
 <template>
   <v-toolbar density="compact" title="Donation System" color="transparent" style="margin-bottom: 16px;">
     <toggle-theme />
-    <v-btn prepend-icon="mdi-account-key" variant="tonal" @click="goToLogin"> {{ $t('buttons.signin') }} </v-btn>
+    <v-btn prepend-icon="mdi-account-key" variant="text" @click="goToLogin"> {{ $t('buttons.signin') }} </v-btn>
   </v-toolbar>
 </template>
 

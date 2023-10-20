@@ -1,0 +1,32 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`LinearStepper > renders the component 1`] = `
+"<div data-v-b7d7fd08=\\"\\" class=\\"v-container v-container--fluid v-locale--is-ltr linear-stepper\\">
+  <div data-v-b7d7fd08=\\"\\" class=\\"v-row align-center justify-space-between stepper-dots\\" style=\\"margin-bottom: 8px;\\">
+    <div data-v-b7d7fd08=\\"\\" class=\\"container\\">
+      <p data-v-b7d7fd08=\\"\\" class=\\"item selected\\">1</p>
+      <p data-v-b7d7fd08=\\"\\">Step 1</p>
+    </div>
+    <div data-v-b7d7fd08=\\"\\" class=\\"container\\">
+      <p data-v-b7d7fd08=\\"\\" class=\\"item\\">2</p>
+      <p data-v-b7d7fd08=\\"\\">Step 2</p>
+    </div>
+    <div data-v-b7d7fd08=\\"\\" class=\\"container\\">
+      <p data-v-b7d7fd08=\\"\\" class=\\"item\\">3</p>
+      <p data-v-b7d7fd08=\\"\\">Step 2</p>
+    </div>
+  </div>
+  <div data-v-b7d7fd08=\\"\\" class=\\"v-row v-row--no-gutters align-center justify-center\\">
+    <p data-v-b7d7fd08=\\"\\">Mock component</p>
+  </div>
+  <div data-v-b7d7fd08=\\"\\" class=\\"v-row v-row--no-gutters align-center justify-end\\"><button data-v-b7d7fd08=\\"\\" type=\\"button\\" class=\\"v-btn v-btn--disabled v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text\\" disabled=\\"\\"><span class=\\"v-btn__overlay\\"></span><span class=\\"v-btn__underlay\\"></span>
+      <!----><span class=\\"v-btn__content\\" data-no-activator=\\"\\">buttons.back</span>
+      <!---->
+      <!---->
+    </button><button data-v-b7d7fd08=\\"\\" type=\\"button\\" class=\\"v-btn v-btn--elevated v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-elevated\\" style=\\"background-color: rgb(201, 10, 0); color: rgb(255, 255, 255); caret-color: #fff;\\"><span class=\\"v-btn__overlay\\"></span><span class=\\"v-btn__underlay\\"></span>
+      <!----><span class=\\"v-btn__content\\" data-no-activator=\\"\\">buttons.advance</span>
+      <!---->
+      <!---->
+    </button></div>
+</div>"
+`;

@@ -13,7 +13,7 @@ exports[`ToggleTheme > renders the component 1`] = `
       <!----><span class=\\"v-btn__content\\" data-no-activator=\\"\\"><div><i class=\\"mdi-weather-night mdi v-icon notranslate v-theme--light v-icon--size-default\\" aria-hidden=\\"true\\"></i></div></span>
       <!---->
       <!---->
-    </button><button type=\\"button\\" class=\\"v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-tonal\\"><span class=\\"v-btn__overlay\\"></span><span class=\\"v-btn__underlay\\"></span><span class=\\"v-btn__prepend\\"><i class=\\"mdi-account-key mdi v-icon notranslate v-theme--light v-icon--size-default\\" aria-hidden=\\"true\\"></i></span><span class=\\"v-btn__content\\" data-no-activator=\\"\\">buttons.signin</span>
+    </button><button type=\\"button\\" class=\\"v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text\\"><span class=\\"v-btn__overlay\\"></span><span class=\\"v-btn__underlay\\"></span><span class=\\"v-btn__prepend\\"><i class=\\"mdi-account-key mdi v-icon notranslate v-theme--light v-icon--size-default\\" aria-hidden=\\"true\\"></i></span><span class=\\"v-btn__content\\" data-no-activator=\\"\\">buttons.signin</span>
       <!---->
       <!---->
     </button>
