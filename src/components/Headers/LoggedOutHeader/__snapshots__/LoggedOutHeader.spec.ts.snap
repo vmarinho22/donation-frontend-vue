@@ -1,0 +1,26 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ToggleTheme > renders the component 1`] = `
+"<header class=\\"v-toolbar v-toolbar--density-compact v-theme--light v-locale--is-ltr\\">
+  <!---->
+  <div class=\\"v-toolbar__content\\" style=\\"height: 48px;\\">
+    <!---->
+    <div class=\\"v-toolbar-title\\">
+      <div class=\\"v-toolbar-title__placeholder\\">Donation System
+        <!---->
+      </div>
+    </div><button type=\\"button\\" class=\\"v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text\\"><span class=\\"v-btn__overlay\\"></span><span class=\\"v-btn__underlay\\"></span>
+      <!----><span class=\\"v-btn__content\\" data-no-activator=\\"\\"><div><i class=\\"mdi-weather-night mdi v-icon notranslate v-theme--light v-icon--size-default\\" aria-hidden=\\"true\\"></i></div></span>
+      <!---->
+      <!---->
+    </button><button type=\\"button\\" class=\\"v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text\\"><span class=\\"v-btn__overlay\\"></span><span class=\\"v-btn__underlay\\"></span><span class=\\"v-btn__prepend\\"><i class=\\"mdi-account-key mdi v-icon notranslate v-theme--light v-icon--size-default\\" aria-hidden=\\"true\\"></i></span><span class=\\"v-btn__content\\" data-no-activator=\\"\\">buttons.signin</span>
+      <!---->
+      <!---->
+    </button>
+    <!---->
+  </div>
+  <transition-stub name=\\"expand-transition\\" appear=\\"false\\" persisted=\\"false\\" css=\\"true\\">
+    <!---->
+  </transition-stub>
+</header>"
+`;

@@ -5,6 +5,7 @@ import { createPinia } from 'pinia'
 
 // Vuetify
 import 'vuetify/styles'
+import '@mdi/font/css/materialdesignicons.css'
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
@@ -33,6 +34,9 @@ app.use(createPinia())
 app.use(createVuetify({
   components,
   directives,
+  icons: {
+    defaultSet: 'mdi',
+  },
 }))
 app.use(i18n)
 app.use(router)
