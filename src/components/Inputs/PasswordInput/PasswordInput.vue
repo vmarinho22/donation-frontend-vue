@@ -5,15 +5,14 @@
       (v) => {
         const parsedValue = z
           .string({
-            required_error: $t('inputs.password.rules.required')
+            required_error: props.labels.rules.required,
           })
           .min(8, {
-            message: $t('inputs.password.rules.min'),
+            message: props.labels.rules.min,
           })
           .safeParse(v)
 
         if (!parsedValue.success) {
-          console.log(parsedValue.error.errors)
           return parsedValue.error.errors.map((item) => item.message).join('|')
         }
 
@@ -21,16 +20,31 @@
       }
     ]"
     :type="showPassword ? 'text' : 'password'"
-    :label="$t('inputs.password.label')"
-    :hint="$t('inputs.password.hint')"
+    :label="props.labels.label"
+    :hint="props.labels.hint"
     counter
     @click:append-inner="showPassword = !showPassword"
+    v-bind="attrs"
   />
 </template>
 
 <script setup lang="ts">
+import { useAttrs } from 'vue'
 import  { ref } from 'vue'
 import { z } from 'zod'
+
+const props = defineProps<{
+  labels: {
+    label: string
+    hint: string
+    rules: {
+      required: string
+      min: string
+    }
+  }
+}>()
+
+const attrs = useAttrs()
 
 const showPassword = ref(false)
 </script>
