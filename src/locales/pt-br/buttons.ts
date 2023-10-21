@@ -3,4 +3,5 @@ export default {
   back: 'Voltar',
   advance: 'Avançar',
   finish: 'Finalizar',
+  send: 'Enviar',
 }
