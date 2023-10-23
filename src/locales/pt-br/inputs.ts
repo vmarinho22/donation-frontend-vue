@@ -62,4 +62,65 @@ export default {
       max: 'O Celular deve ter no máximo 13 dígitos'
     }
   },
+  postalCode: {
+    label: 'CEP',
+    hint: '12345-123',
+    rules: {
+      required: 'Campo obrigatório',
+      invalid: 'CEP inválido',
+      min: 'O CEP deve ter no mínimo 9 dígitos',
+      max: 'O CEP deve ter no máximo 9 dígitos'
+    }
+  },
+  street: {
+    label: 'Endereço',
+    placeholder: 'Rua João Pedro',
+    rules: {
+      required: 'Campo obrigatório',
+      invalid: 'Nome inválido',
+    }
+  },
+  hasNumber: {
+    label: 'Tem número?'
+  },
+  number: {
+    label: 'Número',
+    placeholder: '123',
+  },
+  complement: {
+    label: 'Complemento',
+    placeholder: 'Ap 106, bloco 1, ...',
+  },
+  district: {
+    label: 'Bairro',
+    placeholder: 'Jardim das Flores',
+    rules: {
+      required: 'Campo obrigatório',
+      invalid: 'Bairro inválido',
+    }
+  },
+  city: {
+    label: 'Cidade',
+    placeholder: 'São Paulo',
+    rules: {
+      required: 'Campo obrigatório',
+      invalid: 'Cidade inválido',
+    }
+  },
+  state: {
+    label: 'Estado',
+    placeholder: 'São Paulo',
+    rules: {
+      required: 'Campo obrigatório',
+      invalid: 'Estado inválido',
+    }
+  },
+  uf: {
+    label: 'UF',
+    placeholder: 'SP',
+    rules: {
+      required: 'Campo obrigatório',
+      invalid: 'UF inválido',
+    }
+  },
 }
