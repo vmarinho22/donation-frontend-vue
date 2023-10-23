@@ -18,6 +18,13 @@ import router from './router'
 
 import ptBrLocale from './locales/pt-br'
 
+// Pinia persist
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
+
+// Toast
+import ToastPlugin from 'vue-toast-notification';
+import 'vue-toast-notification/dist/theme-bootstrap.css';
+
 const messages = {
   'pt-br': ptBrLocale,
 }
@@ -26,11 +33,12 @@ const i18n = createI18n({
   locale: 'pt-br',
   fallbackLocale: 'pt-br',
   messages,
+  legacy: false,
 })
 
 const app = createApp(App)
 
-app.use(createPinia())
+app.use(createPinia().use(piniaPluginPersistedstate))
 app.use(createVuetify({
   components,
   directives,
@@ -39,6 +47,7 @@ app.use(createVuetify({
   },
 }))
 app.use(i18n)
+app.use(ToastPlugin)
 app.use(router)
 
 app.mount('#app')

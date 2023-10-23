@@ -179,8 +179,6 @@ const loadingPostalCode = ref(false)
 watch(address, async (newValue) => {
   if (
     newValue.postalCode.length === 9 &&
-    newValue.street === '' &&
-    newValue.district === '' &&
     !loadingPostalCode.value
   ) {
     loadingPostalCode.value = true
