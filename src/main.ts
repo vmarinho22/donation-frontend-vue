@@ -25,6 +25,11 @@ import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 import ToastPlugin from 'vue-toast-notification';
 import 'vue-toast-notification/dist/theme-bootstrap.css';
 
+// Vue final modal
+import { createVfm } from 'vue-final-modal'
+import 'vue-final-modal/style.css'
+
+
 const messages = {
   'pt-br': ptBrLocale,
 }
@@ -48,6 +53,7 @@ app.use(createVuetify({
 }))
 app.use(i18n)
 app.use(ToastPlugin)
+app.use(createVfm())
 app.use(router)
 
 app.mount('#app')

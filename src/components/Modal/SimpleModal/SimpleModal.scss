@@ -1,0 +1,21 @@
+.simple-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1004 !important;
+  width: 100vw;
+  height: 100vh;
+
+  @supports (width: 100dvw) {
+    width: 100dvw;
+  }
+
+  @supports (height: 100dvh) {
+    height: 100dvh;
+  }
+
+  .simple-modal-container {
+    min-width: 30vw;
+  }
+}

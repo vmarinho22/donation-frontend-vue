@@ -51,7 +51,6 @@ const { updateUser } = useUser()
 
 
 async function onFinishSignUp() {
-  console.log({ user, profile, address })
   try {
     const createdUser = await api.post<CreatedUserApiReturn>('/signup', {
       user: {
