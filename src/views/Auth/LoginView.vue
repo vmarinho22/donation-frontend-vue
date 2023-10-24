@@ -11,12 +11,17 @@
           placeholder="email@email.com"
         />
 
-        <v-text-field
+        <password-input
           v-model="loginAuth.password"
-          :readonly="loading"
-          clearable
-          :label="$t('inputs.password.label')"
-          :placeholder="$t('inputs.password.placeholder')"
+          :labels="{
+            label: $t('inputs.password.label'),
+            hint: '',
+            rules: {
+              required: $t('inputs.password.rules.required'),
+              min: $t('inputs.password.rules.min')
+            }
+          }"
+          required
         />
 
         <br />
@@ -47,6 +52,7 @@ import { useI18n } from 'vue-i18n'
 import { useToast } from 'vue-toast-notification'
 import axios from 'axios'
 import { useRouter } from 'vue-router'
+import PasswordInput from '@/components/Inputs/PasswordInput/PasswordInput.vue'
 
 const { loginAuth, signIn } = useAuth()
 const { updateUser } = useUser()
