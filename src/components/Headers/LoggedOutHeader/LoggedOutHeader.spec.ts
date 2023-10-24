@@ -4,7 +4,7 @@ import { mount } from '@vue/test-utils'
 import LoggedOutHeader from './LoggedOutHeader.vue'
 import vuetify from '@/tests/plugins/vuetify'
 
-describe('ToggleTheme', () => {
+describe('LoggedOutHeader', () => {
   it('renders the component', () => {
     const wrapper = mount(LoggedOutHeader, {
       global: {

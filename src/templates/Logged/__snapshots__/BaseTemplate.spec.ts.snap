@@ -1,0 +1,82 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BaseTemplate > renders the component 1`] = `
+"<div data-v-980a0d65=\\"\\" class=\\"v-layout base-template\\">
+  <nav class=\\"v-navigation-drawer v-navigation-drawer--left v-navigation-drawer--rail v-navigation-drawer--active v-theme--light\\" style=\\"left: 0px; z-index: 1004; transform: translateX(0%); position: fixed; transition: none;\\" data-v-980a0d65=\\"\\">
+    <!---->
+    <!---->
+    <div class=\\"v-navigation-drawer__content\\">
+      <div data-v-980a0d65=\\"\\" class=\\"v-list v-theme--light bg-transparent v-list--density-default v-list--one-line\\" tabindex=\\"0\\" role=\\"listbox\\">
+        <div data-v-980a0d65=\\"\\" class=\\"v-list-item v-theme--light v-list-item--density-default v-list-item--one-line v-list-item--variant-text\\">
+          <!----><span class=\\"v-list-item__underlay\\"></span>
+          <!---->
+          <div class=\\"v-list-item__content\\" data-no-activator=\\"\\">
+            <div class=\\"v-list-item-title\\"> </div>
+            <div class=\\"v-list-item-subtitle\\">roles.patient</div>
+            <!---->
+          </div>
+          <div class=\\"v-list-item__append\\"><button data-v-980a0d65=\\"\\" type=\\"button\\" class=\\"v-btn v-btn--icon v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text\\"><span class=\\"v-btn__overlay\\"></span><span class=\\"v-btn__underlay\\"></span>
+              <!----><span class=\\"v-btn__content\\" data-no-activator=\\"\\"><i class=\\"mdi-chevron-left mdi v-icon notranslate v-theme--light v-icon--size-default\\" aria-hidden=\\"true\\"></i></span>
+              <!---->
+              <!---->
+            </button>
+            <div class=\\"v-list-item__spacer\\"></div>
+          </div>
+        </div>
+      </div>
+      <div data-v-980a0d65=\\"\\" class=\\"v-list v-list--nav v-theme--light bg-transparent v-list--density-compact v-list--one-line\\" tabindex=\\"0\\" role=\\"listbox\\">
+        <div data-v-980a0d65=\\"\\" class=\\"v-list-item v-list-item--link v-list-item--nav v-theme--light v-list-item--density-compact v-list-item--one-line v-list-item--rounded v-list-item--variant-text\\" tabindex=\\"-2\\"><span class=\\"v-list-item__overlay\\"></span><span class=\\"v-list-item__underlay\\"></span>
+          <div class=\\"v-list-item__prepend\\">
+            <!----><i class=\\"mdi-home mdi v-icon notranslate v-theme--light v-icon--size-default\\" aria-hidden=\\"true\\" density=\\"compact\\"></i>
+            <div class=\\"v-list-item__spacer\\"></div>
+          </div>
+          <div class=\\"v-list-item__content\\" data-no-activator=\\"\\">
+            <div class=\\"v-list-item-title\\">menu.Home</div>
+            <!---->
+            <!---->
+          </div>
+          <!---->
+        </div>
+      </div>
+    </div>
+    <div class=\\"v-navigation-drawer__append\\">
+      <div data-v-980a0d65=\\"\\" class=\\"config-buttons\\"><button data-v-980a0d65=\\"\\" type=\\"button\\" class=\\"v-btn v-btn--icon v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text\\"><span class=\\"v-btn__overlay\\"></span><span class=\\"v-btn__underlay\\"></span>
+          <!----><span class=\\"v-btn__content\\" data-no-activator=\\"\\"><i class=\\"mdi-weather-night mdi v-icon notranslate v-theme--light v-icon--size-default\\" aria-hidden=\\"true\\"></i></span>
+          <!---->
+          <!---->
+        </button><button data-v-980a0d65=\\"\\" type=\\"button\\" class=\\"v-btn v-btn--icon v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text\\" aria-haspopup=\\"menu\\" aria-expanded=\\"false\\" aria-owns=\\"v-menu-5\\"><span class=\\"v-btn__overlay\\"></span><span class=\\"v-btn__underlay\\"></span>
+          <!----><span class=\\"v-btn__content\\" data-no-activator=\\"\\"><i class=\\"mdi-account-circle mdi v-icon notranslate v-theme--light v-icon--size-default\\" aria-hidden=\\"true\\"></i></span>
+          <!---->
+          <!---->
+        </button>
+        <!----><br data-v-980a0d65=\\"\\">
+      </div>
+    </div>
+  </nav>
+  <transition-stub name=\\"fade-transition\\" appear=\\"false\\" persisted=\\"false\\" css=\\"true\\">
+    <!---->
+  </transition-stub>
+  <main data-v-980a0d65=\\"\\" class=\\"v-main\\" style=\\"--v-layout-left: 56px; --v-layout-right: 0px; --v-layout-top: 0px; --v-layout-bottom: 0px; transition: none;\\">
+    <header data-v-980a0d65=\\"\\" class=\\"v-toolbar v-toolbar--density-compact bg-transparent v-theme--light v-locale--is-ltr\\" style=\\"margin-bottom: 16px;\\">
+      <!---->
+      <div class=\\"v-toolbar__content\\" style=\\"height: 48px;\\">
+        <!---->
+        <div class=\\"v-toolbar-title\\">
+          <div class=\\"v-toolbar-title__placeholder\\">Donation System
+            <!---->
+          </div>
+        </div><button data-v-980a0d65=\\"\\" type=\\"button\\" class=\\"v-btn v-btn--icon v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text\\"><span class=\\"v-btn__overlay\\"></span><span class=\\"v-btn__underlay\\"></span>
+          <!----><span class=\\"v-btn__content\\" data-no-activator=\\"\\"><i class=\\"mdi-weather-night mdi v-icon notranslate v-theme--light v-icon--size-default\\" aria-hidden=\\"true\\"></i></span>
+          <!---->
+          <!---->
+        </button>
+        <!---->
+      </div>
+      <transition-stub name=\\"expand-transition\\" appear=\\"false\\" persisted=\\"false\\" css=\\"true\\">
+        <!---->
+      </transition-stub>
+    </header>
+    <div data-v-980a0d65=\\"\\" class=\\"v-container v-container--fluid v-locale--is-ltr\\"></div>
+  </main>
+</div>"
+`;

@@ -1,0 +1,37 @@
+.base-template {
+  position: relative;
+  .nav-section {
+    width: 20%;
+  }
+
+  .content-section {
+    width: 80%;
+  }
+
+  .role {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+    gap: 16px;
+  }
+
+  .user-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .config-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+  }
+}
