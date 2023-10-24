@@ -8,6 +8,7 @@ export default {
   },
   password: {
     label: 'Senha',
+    placeholder: 'coxinha123',
     hint: 'Mínimo de 8 caracteres',
     rules: {
       required: 'Campo obrigatório',
@@ -205,5 +206,13 @@ export default {
   notes: {
     label: 'Observações',
     placeholder: 'Tem um detalhe que é...',
+  },
+  user: {
+    label: 'Usuário',
+    placeholder: 'email@email.com',
+    rules: {
+      required: 'Campo obrigatório',
+      invalid: 'Usuário inválido',
+    }
   },
 }

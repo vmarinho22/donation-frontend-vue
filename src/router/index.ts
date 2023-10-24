@@ -8,6 +8,11 @@ export const routes =[
     component: HomeView
   },
   {
+    path: '/auth/login',
+    name: 'login',
+    component: () => import('../views/Auth/LoginView.vue')
+  },
+  {
     path: '/signup',
     name: 'signup',
     component: () => import('../views/SignUp/SignUpView.vue')

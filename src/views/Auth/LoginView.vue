@@ -1,0 +1,101 @@
+<template>
+  <v-container class="pa-12" rounded>
+    <v-card class="mx-auto px-6 py-8" max-width="344">
+      <v-form @submit.prevent>
+        <v-text-field
+          v-model="loginAuth.email"
+          :readonly="loading"
+          class="mb-2"
+          clearable
+          :label="$t('inputs.email.label')"
+          placeholder="email@email.com"
+        />
+
+        <v-text-field
+          v-model="loginAuth.password"
+          :readonly="loading"
+          clearable
+          :label="$t('inputs.password.label')"
+          :placeholder="$t('inputs.password.placeholder')"
+        />
+
+        <br />
+
+        <v-btn
+          block
+          :color="Colors.bloodRed[500]"
+          size="large"
+          prepend-icon="mdi-account-key"
+          @click="onSignIn"
+          :loading="loading"
+        >
+          {{ $t('buttons.signin') }}
+        </v-btn>
+      </v-form>
+    </v-card>
+  </v-container>
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue'
+import { Colors } from '@/constants/colors'
+import { useAuth } from '@/stores/auth'
+import { useUser } from '@/stores/user'
+import type { User } from '@/types/user'
+import api from '@/utils/api'
+import { useI18n } from 'vue-i18n'
+import { useToast } from 'vue-toast-notification'
+import axios from 'axios'
+import { useRouter } from 'vue-router'
+
+const { loginAuth, signIn } = useAuth()
+const { updateUser } = useUser()
+const toast = useToast()
+const { t } = useI18n()
+const router = useRouter()
+
+const loading = ref<boolean>(false)
+
+async function onSignIn() {
+  try {
+    loading.value = true
+    const userId = await signIn()
+
+    const userData = await api.get<User>(`/profiles/full/${userId}`)
+
+    updateUser({ ...userData.data, id: userId })
+
+    toast.success(
+      t('pages.login.success', {
+        name: userData.data.socialName
+          ? userData.data.socialName.split(' ')[0]
+          : userData.data.firstName
+      })
+    )
+
+    router.push({ name: userData.data.role })
+  } catch (error) {
+    console.error(error)
+
+    let message = t('genericMessages.errors.generic')
+
+    if (axios.isAxiosError(error)) {
+      switch (error.response?.status) {
+        case 401:
+          message = t('pages.login.errors.invalidCredentials')
+          break
+        case 400:
+          message = error.response?.data.message
+          break
+        default:
+          message = t('genericMessages.errors.generic')
+          break
+      }
+    }
+
+    toast.error(message)
+  } finally {
+    loading.value = false
+  }
+}
+</script>

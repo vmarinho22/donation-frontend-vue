@@ -13,5 +13,11 @@ export default {
         subtitle: 'Precisamos de mais algumas informações começar a salvar vidas. Juramos que não demora mais que 1 minuto.',
       }
     }
+  },
+  login: {
+    success: 'Olá novamente, {name}!',
+    errors: {
+      invalidCredentials: 'Credenciais inválidas, verifique seu usuário e senha.',
+    }
   }
 }
