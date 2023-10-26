@@ -38,7 +38,7 @@
               <v-list-item @click="console.log('config')">
                 <v-list-item-title>{{ $t('menu.userMenu.config') }}</v-list-item-title>
               </v-list-item>
-              <v-list-item @click="signOff()">
+              <v-list-item @click="signOut()">
                 <v-list-item-title>{{ $t('menu.userMenu.signOut') }}</v-list-item-title>
               </v-list-item>
             </v-list>
@@ -84,6 +84,11 @@ const routeInfo = useRoute()
 
 function goTo(route: string) {
   router.push(route)
+}
+
+function signOut() {
+  signOff()
+  router.push('/auth/login')
 }
 </script>
 
