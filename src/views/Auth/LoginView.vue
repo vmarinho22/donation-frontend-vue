@@ -1,7 +1,7 @@
 <template>
   <v-container class="pa-12" rounded>
     <v-card class="mx-auto px-6 py-8" max-width="344">
-      <v-form @submit.prevent>
+      <v-form @submit.prevent="onSignIn">
         <v-text-field
           v-model="loginAuth.email"
           :readonly="loading"
@@ -31,8 +31,8 @@
           :color="Colors.bloodRed[500]"
           size="large"
           prepend-icon="mdi-account-key"
-          @click="onSignIn"
           :loading="loading"
+          type="submit"
         >
           {{ $t('buttons.signin') }}
         </v-btn>
