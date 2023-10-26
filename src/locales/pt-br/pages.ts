@@ -24,5 +24,11 @@ export default {
       title: 'Painel administrativo',
       subtitle: 'Aqui você pode gerenciar todos os dados do sistema.',
     },
+    doctors :{
+      home: {
+        title: 'Gerenciamento de médicos(as)',
+        subtitle: 'Aqui você pode gerenciar todos os médicos(as) do sistema.',
+      }
+    }
   }
 }

@@ -25,7 +25,19 @@ export const routes =[
   {
     path: '/admin',
     name: 'admin',
-    component: () => import('../views/Admin/AdminView.vue')
+    component: () => import('../views/Admin/AdminView.vue'),
+    children: [
+      {
+        path: '',
+        name: 'admin-home',
+        component: () => import('../views/Admin/Home/HomeView.vue')
+      },
+      {
+        path: 'doctors',
+        name: 'admin-doctors',
+        component: () => import('../views/Admin/Doctors/DoctorsView.vue')
+      },
+    ]
   }
 ]
 

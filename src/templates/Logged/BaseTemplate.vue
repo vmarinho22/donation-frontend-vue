@@ -23,7 +23,7 @@
           :title="$t(`menu.${item.localeKey}`)"
           :value="item.id"
           :active="routeInfo.fullPath.startsWith(`/${item.id}`)"
-          @click="goTo(`/${item.id}`)"
+          @click="goTo(`${item.route}`)"
         />
       </v-list>
 

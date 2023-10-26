@@ -8,6 +8,7 @@ export default {
     donations: 'Doação',
   },
   adminMenu: {
+    home: 'Início',
     doctors: 'Médicos(as)',
     nurses: 'Enfermeiros(as)',
     entities: 'Entidades',
