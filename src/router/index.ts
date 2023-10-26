@@ -21,6 +21,11 @@ export const routes =[
     path: '/patient',
     name: 'patient',
     component: () => import('../views/Patient/PatientView.vue')
+  },
+  {
+    path: '/admin',
+    name: 'admin',
+    component: () => import('../views/Admin/AdminView.vue')
   }
 ]
 
