@@ -22,6 +22,7 @@ describe('BaseTemplate', () => {
             id: '1',
             localeKey: 'Home',
             icon: 'mdi-home',
+            route: '/'
           }
         ]
       }

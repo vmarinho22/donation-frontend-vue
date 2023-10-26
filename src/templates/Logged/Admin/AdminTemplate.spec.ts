@@ -1,3 +1,4 @@
+import { routes } from './../../../router/index';
 import { describe, it, expect } from 'vitest'
 
 import { mount } from '@vue/test-utils'
@@ -22,6 +23,7 @@ describe('AdminTemplate Component', () => {
             id: '1',
             localeKey: 'Home',
             icon: 'mdi-home',
+            route: '/'
           }
         ]
       }

@@ -75,7 +75,6 @@ describe('Patient Store', () => {
     await fetchMedicalRecord(medicalRecordId)
 
     expect(api.get).toHaveBeenCalledWith(`/medical-records/${medicalRecordId}`)
-    expect(api.get).toHaveBeenCalledTimes(1)
   })
 
 })

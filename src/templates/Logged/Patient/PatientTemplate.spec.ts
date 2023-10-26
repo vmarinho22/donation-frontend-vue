@@ -22,6 +22,7 @@ describe('PatientTemplate Component', () => {
             id: '1',
             localeKey: 'Home',
             icon: 'mdi-home',
+            route: '/'
           }
         ]
       }
