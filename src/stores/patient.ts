@@ -2,6 +2,7 @@ import { defineStore } from 'pinia'
 import type { Patient } from '@/types/patient'
 import { ref } from 'vue'
 import type { MedicalRecord } from '@/types/medicalRecord'
+import api from '@/utils/api'
 
 type RegisterPatientState = {
   birthDate: Date
@@ -87,6 +88,20 @@ export const usePatient = defineStore(
       medicalRecord.value = Object.assign(medicalRecord.value, medicalRecordPartialData)
     }
 
+    async function fetchPatientDataByUserId(userId: string) {
+      const patientData = await api.get<Patient>(`/patients/by-user/${userId}`).then(res => res.data)
+
+      updatePatient(patientData)
+    }
+
+    async function fetchMedicalRecord(id: string) {
+      const medicalRecordData = await api
+        .get<MedicalRecord>(`/medical-records/${id}`)
+        .then(res => res.data)
+
+      updateMedicalRecord(medicalRecordData)
+    }
+
     return {
       patient,
       registerState: registerPatientState,
@@ -94,7 +109,9 @@ export const usePatient = defineStore(
       registerMedicalRecord,
       updatePatient,
       updateRegisterState,
-      updateMedicalRecord
+      updateMedicalRecord,
+      fetchPatientDataByUserId,
+      fetchMedicalRecord
     }
   },
   {

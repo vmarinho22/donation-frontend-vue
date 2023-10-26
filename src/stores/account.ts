@@ -14,6 +14,7 @@ export const useAccount = defineStore('account', () => {
   function signOff() {
     updateUser(initialState)
     localStorage.removeItem('user')
+    localStorage.removeItem('patient')
   }
 
   return { account, signOff }
