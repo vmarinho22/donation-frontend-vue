@@ -18,5 +18,11 @@ export default {
     errors: {
       invalidCredentials: 'Credenciais inválidas, verifique seu usuário e senha.',
     }
+  },
+  admin: {
+    home: {
+      title: 'Painel administrativo',
+      subtitle: 'Aqui você pode gerenciar todos os dados do sistema.',
+    },
   }
 }

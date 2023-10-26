@@ -6,5 +6,10 @@ export default {
   patientMenu: {
     patients: 'Paciente',
     donations: 'Doação',
+  },
+  adminMenu: {
+    doctors: 'Médicos(as)',
+    nurses: 'Enfermeiros(as)',
+    entities: 'Entidades',
   }
 }
