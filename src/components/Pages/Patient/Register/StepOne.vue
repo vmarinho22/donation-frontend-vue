@@ -8,6 +8,23 @@
           </div>
           <div v-else>
             <v-text-field
+              v-model="registerState.rg"
+              variant="solo-filled"
+              type="text"
+              clearable
+              :label="$t('inputs.rg.label')"
+              :placeholder="$t('inputs.rg.placeholder')"
+              :rules="[
+                (v) =>
+                  inputValidations.text(v, {
+                    required: $t('inputs.rg.rules.required'),
+                    invalid: $t('inputs.rg.rules.invalid')
+                  })
+              ]"
+              required
+              v-maska:[rgMaskOptions]
+            />
+            <v-text-field
               v-model="registerState.birthDate"
               variant="solo-filled"
               type="date"
@@ -88,6 +105,8 @@ import { useI18n } from 'vue-i18n'
 import api from '@/utils/api';
 import type { Blood } from '@/types/blood';
 import { useToast } from 'vue-toast-notification'
+import { vMaska } from 'maska'
+
 
 const { registerState } = usePatient()
 const { t } = useI18n()
@@ -102,6 +121,10 @@ const sexOptions = [
 
 const loadingBloods = ref(true)
 const bloods = ref<Blood[] | null>(null)
+
+const rgMaskOptions = {
+  mask: '##.###.###-#'
+}
 
 onBeforeMount(async () => {
   try {

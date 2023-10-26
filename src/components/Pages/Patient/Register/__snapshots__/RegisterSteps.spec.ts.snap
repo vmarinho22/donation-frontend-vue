@@ -1,0 +1,3 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`RegisterSteps > renders the component 1`] = `"<linear-stepper-stub steps=\\"[object Object],[object Object]\\"></linear-stepper-stub>"`;

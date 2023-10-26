@@ -1,28 +1,20 @@
 <template>
   <patient-template>
-    <p>oi</p>
+    <div v-if="!patient.id">
+      <h2>
+        {{ $t('pages.patient.register.title') }}
+      </h2>
+      <p>{{ $t('pages.patient.register.subtitle') }}</p>
+      <br>
+      <register-steps />
+    </div>
   </patient-template>
 </template>
 
 <script setup lang="ts">
 import PatientTemplate from '@/templates/Logged/Patient/PatientTemplate.vue'
-import { useModal } from 'vue-final-modal'
-import SimpleModal from '@/components/Modal/SimpleModal/SimpleModal.vue'
-import { useI18n } from 'vue-i18n';
 import RegisterSteps from '@/components/Pages/Patient/Register/RegisterSteps.vue';
+import { usePatient } from '@/stores/patient';
 
-const { t } = useI18n()
-
-const { open } = useModal({
-  component: SimpleModal,
-  attrs: {
-    title: t('pages.patient.register.modal.title'),
-    subtitle: t('pages.patient.register.modal.subtitle'),
-  },
-  slots: {
-    default: RegisterSteps
-  }
-})
-
-open()
+const { patient } = usePatient()
 </script>

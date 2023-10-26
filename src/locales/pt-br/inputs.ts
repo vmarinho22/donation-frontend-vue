@@ -215,4 +215,12 @@ export default {
       invalid: 'Usuário inválido',
     }
   },
+  rg: {
+    label: 'RG',
+    placeholder: '12.345.678-9',
+    rules: {
+      required: 'Campo obrigatório',
+      invalid: 'RG inválido',
+    }
+  },
 }

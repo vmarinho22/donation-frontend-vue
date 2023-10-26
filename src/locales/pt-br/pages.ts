@@ -6,12 +6,11 @@ export default {
   },
   patient: {
     register: {
+      title: 'Finalizar cadastro',
+      subtitle: 'Precisamos de mais algumas informações começar a salvar vidas. Juramos que não demora mais que 1 minuto.',
       stepOne: 'Dados básicos',
       stepTwo: 'Ficha médica',
-      modal: {
-        title: 'Finalizar cadastro',
-        subtitle: 'Precisamos de mais algumas informações começar a salvar vidas. Juramos que não demora mais que 1 minuto.',
-      }
+      success: 'Seu cadastro foi finalizado com sucesso!',
     }
   },
   login: {

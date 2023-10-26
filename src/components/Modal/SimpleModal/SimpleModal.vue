@@ -1,19 +1,18 @@
 <template>
   <VueFinalModal class="simple-modal">
     <v-card
-      class="mx-auto"
-      min-width="60vw"
+      class="simple-modal-content-container mx-auto"
     >
       <v-card-title>
         {{ title }}
       </v-card-title>
       
-      <v-card-subtitle v-if="subtitle">
-        {{ subtitle }}
+      <v-card-subtitle v-if="subtitle" style="white-space: inherit;">
+        <p>{{ subtitle }}</p>
       </v-card-subtitle>
 
 
-      <v-card-text>
+      <v-card-text class="simple-modal-content">
         <slot />
       </v-card-text>
 

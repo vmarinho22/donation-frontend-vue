@@ -1,17 +1,17 @@
 import { defineStore } from 'pinia'
 import type { Patient } from '@/types/patient'
 import { ref } from 'vue'
-import type { MedicalRecord } from '@/types/medicalRecord';
+import type { MedicalRecord } from '@/types/medicalRecord'
 
 type RegisterPatientState = {
-  birthDate: Date;
-  sex: 'man' | 'woman' | 'other';
-  gender: string | null;
-  age: number;
-  weight: number;
-  height: number;
-  rg: string;
-  bloodId: string;
+  birthDate: Date
+  sex: 'man' | 'woman' | 'other'
+  gender: string | null
+  age: number
+  weight: number
+  height: number
+  rg: string
+  bloodId: string
 }
 
 export const initialPatientRegisterState: RegisterPatientState = {
@@ -22,7 +22,7 @@ export const initialPatientRegisterState: RegisterPatientState = {
   weight: 0,
   height: 0,
   rg: '',
-  bloodId: '',
+  bloodId: ''
 }
 
 export const initialPatientState: Patient = {
@@ -31,11 +31,10 @@ export const initialPatientState: Patient = {
   userId: '',
   medicalRecordId: '',
   createdAt: new Date(),
-  updatedAt: null,
+  updatedAt: null
 }
 
-export const initialMedicalRecordState: MedicalRecord = {
-  id: '',
+const initialMedicalRecordRegisterState = {
   hasChronicDiseases: false,
   chronicDiseases: undefined,
   hasMedicalConditions: false,
@@ -53,29 +52,52 @@ export const initialMedicalRecordState: MedicalRecord = {
   hadPregnancy: false,
   recentlyBreastfed: false,
   lastBreastfeeding: undefined,
-  notes: undefined,
-  createdAt: new Date(),
-  updatedAt: null,
+  notes: undefined
 }
 
-export const usePatient = defineStore('patient', () => {
-  const patient = ref<Patient>(initialPatientState)
-  const registerPatientState = ref<RegisterPatientState>(initialPatientRegisterState)
-  const medicalRecord = ref<MedicalRecord>(initialMedicalRecordState)
+export const initialMedicalRecordState: MedicalRecord = {
+  id: '',
+  ...initialMedicalRecordRegisterState,
+  createdAt: new Date(),
+  updatedAt: null
+}
 
-  function updatePatient(userPartialData: Partial<Patient>) {
-    patient.value = Object.assign(patient.value, userPartialData)
+export const usePatient = defineStore(
+  'patient',
+  () => {
+    const patient = ref<Patient>(initialPatientState)
+    const registerPatientState = ref<RegisterPatientState>(initialPatientRegisterState)
+    const medicalRecord = ref<MedicalRecord>(initialMedicalRecordState)
+    const registerMedicalRecord = ref(initialMedicalRecordRegisterState)
+
+    function updatePatient(userPartialData: Partial<Patient>) {
+      patient.value = Object.assign(patient.value, userPartialData)
+    }
+
+    function updateRegisterState(registerStatePartialData: Partial<RegisterPatientState>) {
+      registerPatientState.value = Object.assign(
+        registerPatientState.value,
+        registerStatePartialData
+      )
+    }
+
+    function updateMedicalRecord(
+      medicalRecordPartialData: Partial<Omit<MedicalRecord, 'id' | 'createdAt' | 'updatedAt'>>
+    ) {
+      medicalRecord.value = Object.assign(medicalRecord.value, medicalRecordPartialData)
+    }
+
+    return {
+      patient,
+      registerState: registerPatientState,
+      medicalRecord,
+      registerMedicalRecord,
+      updatePatient,
+      updateRegisterState,
+      updateMedicalRecord
+    }
+  },
+  {
+    persist: true
   }
-
-  function updateRegisterState(registerStatePartialData: Partial<RegisterPatientState>) {
-    registerPatientState.value = Object.assign(registerPatientState.value, registerStatePartialData)
-  }
-
-  function updateMedicalRecord(medicalRecordPartialData: Partial<Omit<MedicalRecord, 'id' | 'createdAt' | 'updatedAt'>>) {
-    medicalRecord.value = Object.assign(medicalRecord.value, medicalRecordPartialData)
-  }
-
-  return { patient, registerState: registerPatientState, medicalRecord, updatePatient, updateRegisterState, updateMedicalRecord }
-}, {
-  persist: true
-})
+)

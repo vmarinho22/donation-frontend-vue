@@ -2,4 +2,26 @@
 
 body {
   font-family: 'Inter', sans-serif !important;
+  overflow-y: auto !important;
+}
+
+/* Firefox */
+*{
+  scrollbar-width: auto;
+  scrollbar-color: #c2c2c2 #FFFFFF;
+}
+
+/* Other browsers */
+*::-webkit-scrollbar{
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track{
+  background: #FFFFFF;
+}
+
+*::-webkit-scrollbar-thumb{
+  background-color: #c2c2c2;
+  border-radius: 11px;
+  border: 3px solid #FFFFFF;
 }

@@ -18,4 +18,13 @@
   .simple-modal-container {
     min-width: 30vw;
   }
+
+  .simple-modal-content-container {
+    max-width: 90%;
+
+    .simple-modal-content {
+      max-height: 50vh;
+      overflow-y: auto;
+    }
+  }
 }
