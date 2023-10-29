@@ -28,6 +28,21 @@ export default {
       home: {
         title: 'Gerenciamento de médicos(as)',
         subtitle: 'Aqui você pode gerenciar todos os médicos(as) do sistema.',
+        table: {
+          name: 'Nome',
+          email: 'E-mail',
+          specialty: 'Especialidade',
+          registrationNumber: 'CRM',
+          disabled: 'Desativado',
+          disabledAt: 'Desativado em',
+          creationDate: 'Criado em',
+          actions: 'Ações',
+        },
+        disabled: {
+          yes: 'Sim',
+          no: 'Não',
+          notDisabled: 'Não desativado',
+        },
       }
     }
   }

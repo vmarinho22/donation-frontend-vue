@@ -48,7 +48,7 @@
       </template>
     </v-navigation-drawer>
 
-    <v-main>
+    <v-main style="min-height: 100vh;">
       <v-toolbar
         density="compact"
         title="Donation System"
