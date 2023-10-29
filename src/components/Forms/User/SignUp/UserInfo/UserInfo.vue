@@ -16,30 +16,32 @@
             ]"
             required
           />
-          <password-input
-            v-model="user.password"
-            :labels="{
-              label: $t('inputs.password.label'),
-              hint: $t('inputs.password.hint'),
-              rules: {
-                required: $t('inputs.password.rules.required'),
-                min: $t('inputs.password.rules.min')
-              }
-            }"
-            required
-          />
-          <password-input
-            v-model="user.confirmPassword"
-            :labels="{
-              label: $t('inputs.confirmPassword.label'),
-              hint: $t('inputs.confirmPassword.hint'),
-              rules: {
-                required: $t('inputs.password.rules.required'),
-                min: $t('inputs.password.rules.min')
-              }
-            }"
-            required
-          />
+          <div v-if="showPasswordInput">
+            <password-input
+              v-model="user.password"
+              :labels="{
+                label: $t('inputs.password.label'),
+                hint: $t('inputs.password.hint'),
+                rules: {
+                  required: $t('inputs.password.rules.required'),
+                  min: $t('inputs.password.rules.min')
+                }
+              }"
+              required
+            />
+            <password-input
+              v-model="user.confirmPassword"
+              :labels="{
+                label: $t('inputs.confirmPassword.label'),
+                hint: $t('inputs.confirmPassword.hint'),
+                rules: {
+                  required: $t('inputs.password.rules.required'),
+                  min: $t('inputs.password.rules.min')
+                }
+              }"
+              required
+            />
+          </div>
           <v-text-field
             v-model="user.cpf"
             variant="solo-filled"
@@ -80,6 +82,9 @@
 </template>
 
 <script setup lang="ts">
+const { showPasswordInput = true } = defineProps<{
+  showPasswordInput: boolean
+}>()
 import PasswordInput from '@/components/Inputs/PasswordInput/PasswordInput.vue'
 import { z } from 'zod'
 import { useSignUp } from '@/stores/signup'

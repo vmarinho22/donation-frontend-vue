@@ -19,9 +19,9 @@ import { useToast } from 'vue-toast-notification'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 
-import StepOne from '@/components/Pages/SignUp/StepOne/StepOne.vue'
-import StepTwo from '@/components/Pages/SignUp/StepTwo/StepTwo.vue'
-import StepThree from '@/components/Pages/SignUp/StepThree/StepThree.vue'
+import UserInfo from '@/components/Forms/User/SignUp/UserInfo/UserInfo.vue'
+import ProfileInfo from '@/components/Forms/User/SignUp/ProfileInfo/ProfileInfo.vue'
+import AddressInfo from '@/components/Forms/User/SignUp/AddressInfo/AddressInfo.vue'
 
 type CreatedUserApiReturn = {
   token: string
@@ -31,15 +31,15 @@ type CreatedUserApiReturn = {
 const steps = [
   {
     title: 'Conta',
-    component: StepOne
+    component: UserInfo
   },
   {
     title: 'Perfil',
-    component: StepTwo
+    component: ProfileInfo
   },
   {
     title: 'Endereço',
-    component: StepThree
+    component: AddressInfo
   }
 ]
 

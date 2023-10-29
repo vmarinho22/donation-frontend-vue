@@ -1,13 +1,13 @@
 import { describe, it, expect, vi } from 'vitest'
 
 import { shallowMount } from '@vue/test-utils'
-import StepThree from './StepThree.vue'
+import UserInfo from './UserInfo.vue'
 import vuetify from '@/tests/plugins/vuetify'
 import { createTestingPinia } from '@pinia/testing'
 
-describe('StepThree', () => {
+describe('UserInfo', () => {
   it('renders the component', () => {
-    const wrapper = shallowMount(StepThree, {
+    const wrapper = shallowMount(UserInfo, {
       global: {
         plugins: [vuetify, createTestingPinia({
           createSpy: vi.fn()
