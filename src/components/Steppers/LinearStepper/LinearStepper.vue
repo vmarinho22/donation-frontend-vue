@@ -9,7 +9,7 @@
       </div>
     </v-row>
     <v-row align="center" justify="center" no-gutters>
-      <component :is="component" />
+      <component :is="component" v-bind="steps[currentStep].props" />
     </v-row>
     <v-row align="center" justify="end" no-gutters>
       <v-btn variant="text" :disabled="currentStep === 0" @click="back">
@@ -29,7 +29,8 @@ import { Colors } from '@/constants/colors'
 
 type LinearStepperProps = {
   title: string
-  component: Component
+  component: Component,
+  props?: Record<string, unknown>
 }
 
 const { steps, onFinish } = defineProps<{

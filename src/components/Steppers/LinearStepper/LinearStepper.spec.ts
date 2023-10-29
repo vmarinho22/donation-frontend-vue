@@ -8,7 +8,10 @@ import MockComponentVue from '@/tests/components/MockComponent.vue'
 const steps = [
   {
     title: 'Step 1',
-    component: MockComponentVue
+    component: MockComponentVue,
+    props: {
+      showPasswordInput: true
+    }
   },
   {
     title: 'Step 2',

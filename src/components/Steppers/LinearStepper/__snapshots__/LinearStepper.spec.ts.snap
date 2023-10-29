@@ -17,7 +17,7 @@ exports[`LinearStepper > renders the component 1`] = `
     </div>
   </div>
   <div data-v-b7d7fd08=\\"\\" class=\\"v-row v-row--no-gutters align-center justify-center\\">
-    <p data-v-b7d7fd08=\\"\\">Mock component</p>
+    <p data-v-b7d7fd08=\\"\\" showpasswordinput=\\"true\\">Mock component</p>
   </div>
   <div data-v-b7d7fd08=\\"\\" class=\\"v-row v-row--no-gutters align-center justify-end\\"><button data-v-b7d7fd08=\\"\\" type=\\"button\\" class=\\"v-btn v-btn--disabled v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text\\" disabled=\\"\\"><span class=\\"v-btn__overlay\\"></span><span class=\\"v-btn__underlay\\"></span>
       <!----><span class=\\"v-btn__content\\" data-no-activator=\\"\\">buttons.back</span>
