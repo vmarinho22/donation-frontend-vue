@@ -42,6 +42,11 @@ export const routes =[
             name: 'admin-doctors-home',
             component: () => import('../views/Admin/Doctors/Home/HomeView.vue')
           },
+          {
+            path: 'create',
+            name: 'admin-doctors-create',
+            component: () => import('../views/Admin/Doctors/Create/CreateView.vue')
+          },
         ]
       },
     ]

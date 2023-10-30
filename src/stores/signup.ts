@@ -37,36 +37,42 @@ export type SignUpState = {
   address: AddressSignUp
 }
 
+const initialUserData = {
+  email: '',
+  password: '',
+  confirmPassword: '',
+  cpf: '',
+  role: 'patient'
+} as UserSignUp
+
+const initialProfileData = {
+  firstName: '',
+  lastName: '',
+  socialName: null,
+  photoUrl:
+    'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png',
+  phone: ''
+}
+
+const initialAddressData = {
+  postalCode: '',
+  street: '',
+  hasNumber: false,
+  number: null,
+  complement: null,
+  district: '',
+  city: '',
+  state: '',
+  country: '',
+  uf: ''
+}
+
 export const useSignUp = defineStore('signup', () => {
-  const user = ref<UserSignUp>({
-    email: '',
-    password: '',
-    confirmPassword: '',
-    cpf: '',
-    role: 'patient'
-  })
+  const user = ref<UserSignUp>(initialUserData)
 
-  const profile = ref<ProfileSignUp>({
-    firstName: '',
-    lastName: '',
-    socialName: null,
-    photoUrl:
-      'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png',
-    phone: ''
-  })
+  const profile = ref<ProfileSignUp>(initialProfileData)
 
-  const address = ref<AddressSignUp>({
-    postalCode: '',
-    street: '',
-    hasNumber: false,
-    number: null,
-    complement: null,
-    district: '',
-    city: '',
-    state: '',
-    country: '',
-    uf: ''
-  })
+  const address = ref<AddressSignUp>(initialAddressData)
 
   function updateUser(key: keyof UserSignUp, value: any) {
     user.value[key] = value
@@ -80,5 +86,11 @@ export const useSignUp = defineStore('signup', () => {
     address.value[key] = value as never
   }
 
-  return { user, profile, address, updateUser, updateProfile, updateAddress }
+  function clearAllData() {
+    user.value = Object.assign(user.value, initialUserData)
+    profile.value = Object.assign(profile.value, initialProfileData)
+    address.value = Object.assign(address.value, initialAddressData)
+  }
+
+  return { user, profile, address, updateUser, updateProfile, updateAddress, clearAllData }
 })

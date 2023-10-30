@@ -83,7 +83,7 @@
 
 <script setup lang="ts">
 const { showPasswordInput = true } = defineProps<{
-  showPasswordInput: boolean
+  showPasswordInput?: boolean
 }>()
 import PasswordInput from '@/components/Inputs/PasswordInput/PasswordInput.vue'
 import { z } from 'zod'

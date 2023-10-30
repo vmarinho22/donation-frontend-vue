@@ -43,6 +43,9 @@ export default {
           no: 'Não',
           notDisabled: 'Não desativado',
         },
+      },
+      create: {
+        success: 'Médico(a) criado(a) com sucesso!',
       }
     }
   }

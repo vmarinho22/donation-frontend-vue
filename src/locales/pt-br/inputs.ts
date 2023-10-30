@@ -223,4 +223,24 @@ export default {
       invalid: 'RG inválido',
     }
   },
+  registrationNumber: {
+    label: 'CRM',
+    placeholder: '123456/SP',
+    hint: 'número/UF',
+    rules: {
+      required: 'Campo obrigatório',
+      invalid: 'CRM inválido',
+    }
+  },
+  specialty: {
+    label: 'Especialidade',
+    placeholder: 'Coração',
+    rules: {
+      required: 'Campo obrigatório',
+      invalid: 'Especialidade inválido',
+    }
+  },
+  emergencyTelContact: {
+    label: 'Telefone de contato de emergência',
+  }
 }

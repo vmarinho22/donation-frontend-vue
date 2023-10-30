@@ -39,4 +39,18 @@ describe('SignUp Store', () => {
 
     expect(address.postalCode).toBe(12345678)
   })
+
+  it('should clear all data', () => {
+    const { user, updateUser, profile, address, clearAllData } = useSignUp()
+
+    updateUser('email', 'email@email.com')
+
+    expect(user.email).toBe('email@email.com')
+
+    clearAllData()
+
+    expect(user).not.toBeNull()
+    expect(profile).not.toBeNull()
+    expect(address).not.toBeNull()
+  })
 })
