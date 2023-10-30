@@ -26,15 +26,15 @@
         <td>
           {{
             doctor.disabled
-              ? $t('pages.admin.doctors.home.disabled.yes')
-              : $t('pages.admin.doctors.home.disabled.yes')
+              ? $t('pages.admin.actions.disabled.yes')
+              : $t('pages.admin.actions.disabled.yes')
           }}
         </td>
         <td>
           {{
             doctor.disabledAt
               ? doctor.disabledAt
-              : $t('pages.admin.doctors.home.disabled.notDisabled')
+              : $t('pages.admin.actions.disabled.notDisabled')
           }}
         </td>
         <td>{{ new Date(doctor.createdAt).toLocaleDateString() }}</td>

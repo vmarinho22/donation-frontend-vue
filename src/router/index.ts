@@ -49,6 +49,23 @@ export const routes =[
           },
         ]
       },
+      {
+        path: 'nurses',
+        name: 'admin-nurses',
+        component: () => import('../views/Admin/Nurses/NursesView.vue'),
+        children: [
+          {
+            path: '',
+            name: 'admin-nurses-home',
+            component: () => import('../views/Admin/Nurses/Home/HomeView.vue')
+          },
+          // {
+          //   path: 'create',
+          //   name: 'admin-nurses-create',
+          //   component: () => import('../views/Admin/Nurses/Create/CreateView.vue')
+          // },
+        ]
+      }
     ]
   }
 ]

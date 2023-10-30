@@ -24,7 +24,7 @@ export default {
       title: 'Painel administrativo',
       subtitle: 'Aqui você pode gerenciar todos os dados do sistema.',
     },
-    doctors :{
+    doctors: {
       home: {
         title: 'Gerenciamento de médicos(as)',
         subtitle: 'Aqui você pode gerenciar todos os médicos(as) do sistema.',
@@ -38,15 +38,33 @@ export default {
           creationDate: 'Criado em',
           actions: 'Ações',
         },
-        disabled: {
-          yes: 'Sim',
-          no: 'Não',
-          notDisabled: 'Não desativado',
-        },
       },
       create: {
         success: 'Médico(a) criado(a) com sucesso!',
       }
+    },
+    nurses: {
+      home: {
+        title: 'Gerenciamento de enfermeiros(as)',
+        subtitle: 'Aqui você pode gerenciar todos os enfermeiros(as) do sistema.',
+        table: {
+          name: 'Nome',
+          email: 'E-mail',
+          specialty: 'Especialidade',
+          corenNumber: 'COREN',
+          disabled: 'Desativado',
+          disabledAt: 'Desativado em',
+          creationDate: 'Criado em',
+          actions: 'Ações',
+        },
+      }
+    },
+    actions: {
+      disabled: {
+        yes: 'Sim',
+        no: 'Não',
+        notDisabled: 'Não desativado',
+      },
     }
   }
 }
