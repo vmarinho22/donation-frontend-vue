@@ -242,5 +242,14 @@ export default {
   },
   emergencyTelContact: {
     label: 'Telefone de contato de emergência',
-  }
+  },
+  coren_number: {
+    label: 'COREN',
+    placeholder: 'SP 123.456-AE',
+    hint: 'UF código',
+    rules: {
+      required: 'Campo obrigatório',
+      invalid: 'CORENs inválido',
+    }
+  },
 }

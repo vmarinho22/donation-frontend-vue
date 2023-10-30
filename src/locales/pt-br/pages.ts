@@ -57,7 +57,10 @@ export default {
           creationDate: 'Criado em',
           actions: 'Ações',
         },
-      }
+      },
+      create: {
+        success: 'Enfermeiro(a) criado(a) com sucesso!',
+      },
     },
     actions: {
       disabled: {

@@ -59,11 +59,11 @@ export const routes =[
             name: 'admin-nurses-home',
             component: () => import('../views/Admin/Nurses/Home/HomeView.vue')
           },
-          // {
-          //   path: 'create',
-          //   name: 'admin-nurses-create',
-          //   component: () => import('../views/Admin/Nurses/Create/CreateView.vue')
-          // },
+          {
+            path: 'create',
+            name: 'admin-nurses-create',
+            component: () => import('../views/Admin/Nurses/Create/CreateView.vue')
+          },
         ]
       }
     ]
