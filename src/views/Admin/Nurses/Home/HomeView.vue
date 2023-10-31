@@ -2,7 +2,10 @@
   <h2>{{ $t('pages.admin.nurses.home.title') }}</h2>
   <p>{{ $t('pages.admin.nurses.home.subtitle') }}</p>
   <br />
-  <v-table fixed-header height="60vh">
+  <div v-if="loading">
+    <v-progress-circular indeterminate />
+  </div>
+  <v-table v-else fixed-header height="60vh">
     <thead>
       <tr>
         <th>{{ $t('pages.admin.nurses.home.table.name') }}</th>
@@ -61,8 +64,11 @@ import type { Nurse } from '@/types/nurse'
 const nurses = ref<Nurse[]>([])
 const router = useRouter()
 
+const loading = ref<boolean>(true)
+
 onBeforeMount(async () => {
   nurses.value = await api.get<Nurse[]>('/nurses').then((res) => res.data)
+  loading.value = false
 })
 
 const goToCreateNurse = () => {

@@ -2,6 +2,9 @@
   <h2>{{ $t('pages.admin.doctors.home.title') }}</h2>
   <p>{{ $t('pages.admin.doctors.home.subtitle') }}</p>
   <br />
+  <div v-if="loading">
+    <v-progress-circular indeterminate />
+  </div>
   <v-table fixed-header height="60vh">
     <thead>
       <tr>
@@ -61,8 +64,11 @@ import { useRouter } from 'vue-router'
 const doctors = ref<Doctor[]>([])
 const router = useRouter()
 
+const loading = ref<boolean>(true)
+
 onBeforeMount(async () => {
   doctors.value = await api.get<Doctor[]>('/doctors').then((res) => res.data)
+  loading.value = false
 })
 
 const goToCreateDoctor = () => {
