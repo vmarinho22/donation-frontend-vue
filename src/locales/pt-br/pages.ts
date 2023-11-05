@@ -11,6 +11,36 @@ export default {
       stepOne: 'Dados básicos',
       stepTwo: 'Ficha médica',
       success: 'Seu cadastro foi finalizado com sucesso!',
+    },
+    home: {
+      title: 'Central do paciente',
+      subtitle: 'Veja suas ultimas solicitações, noticias e muito mais...',
+      donations: {
+        create: 'Solicitar doação',
+        hasNoPreDonations: 'Você ainda não possui nenhuma solicitação de doação.',
+        table: {
+          type: {
+            title: 'Tipo',
+            blood: 'Sangue',
+            milk: 'Leite',
+          },
+          status: {
+            title: 'Status',
+            starting: 'Iniciando',
+            inProgress: 'Em progresso',
+            finished: 'Finalizada',
+          },
+          approval: {
+            title: 'Aprovação',
+            true: 'Aprovado',
+            false: 'Reprovado',
+            review: 'Em análise',
+          },
+          doctor: 'Médico(a) responsável',
+          createdAt: 'Solicitado em',
+          actions: 'Ações',
+        }
+      }
     }
   },
   login: {

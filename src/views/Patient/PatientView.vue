@@ -1,20 +1,12 @@
 <template>
   <patient-template>
-    <div v-if="!patient.id">
-      <h2>
-        {{ $t('pages.patient.register.title') }}
-      </h2>
-      <p>{{ $t('pages.patient.register.subtitle') }}</p>
-      <br>
-      <register-steps />
-    </div>
+    <router-view></router-view>
   </patient-template>
 </template>
 
 <script setup lang="ts">
 import { onBeforeMount } from 'vue'
 import PatientTemplate from '@/templates/Logged/Patient/PatientTemplate.vue'
-import RegisterSteps from '@/components/Pages/Patient/Register/RegisterSteps.vue';
 import { usePatient } from '@/stores/patient';
 import { useUser } from '@/stores/user';
 

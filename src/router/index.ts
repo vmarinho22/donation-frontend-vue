@@ -20,7 +20,14 @@ export const routes =[
   {
     path: '/patient',
     name: 'patient',
-    component: () => import('../views/Patient/PatientView.vue')
+    component: () => import('../views/Patient/PatientView.vue'),
+    children: [
+      {
+        path: '',
+        name: 'patient-home',
+        component: () => import('../views/Patient/Home/HomeView.vue')
+      },
+    ]
   },
   {
     path: '/admin',
