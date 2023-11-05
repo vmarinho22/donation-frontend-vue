@@ -24,7 +24,6 @@
             <th>{{ $t('pages.patient.home.donations.table.type.title') }}</th>
             <th>{{ $t('pages.patient.home.donations.table.status.title') }}</th>
             <th>{{ $t('pages.patient.home.donations.table.approval.title') }}</th>
-            <th>{{ $t('pages.patient.home.donations.table.doctor') }}</th>
             <th>{{ $t('pages.patient.home.donations.table.createdAt') }}</th>
             <th>{{ $t('pages.patient.home.donations.table.actions') }}</th>
           </tr>
@@ -40,7 +39,6 @@
                   : $t(`pages.patient.home.donations.table.approval.review`)
               }}
             </td>
-            <td>{{ donation.doctorName }}</td>
             <td>{{ new Date(donation.createdAt).toLocaleDateString() }}</td>
             <td>
               <v-btn
