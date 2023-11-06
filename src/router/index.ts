@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
-export const routes =[
+export const routes = [
   {
     path: '/',
     name: 'home',
@@ -27,6 +27,18 @@ export const routes =[
         name: 'patient-home',
         component: () => import('../views/Patient/Home/HomeView.vue')
       },
+      {
+        path: 'pre-donations',
+        name: 'patient-pre-donations',
+        component: () => import('../views/Patient/PreDonation/PreDonationView.vue'),
+        children: [
+          {
+            path: ':id',
+            name: 'patient-pre-donations-home',
+            component: () => import('../views/Patient/PreDonation/Details/DetailsView.vue')
+          }
+        ]
+      }
     ]
   },
   {

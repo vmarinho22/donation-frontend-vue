@@ -8,7 +8,7 @@
     prepend-icon="mdi-plus"
     :color="Colors.bloodRed[500]"
     style="margin-bottom: 16px;"
-    @click="router.push(`/patient/pre-donation/new`)"
+    @click="router.push(`/patient/pre-donations/new`)"
   >
     {{ $t('pages.patient.home.donations.create') }}
   </v-btn>
@@ -21,8 +21,8 @@
       <v-table v-else fixed-header height="60vh">
         <thead>
           <tr>
-            <th>{{ $t('pages.patient.home.donations.table.type.title') }}</th>
-            <th>{{ $t('pages.patient.home.donations.table.status.title') }}</th>
+            <th>{{ $t('pages.patient.home.donations.type.title') }}</th>
+            <th>{{ $t('pages.patient.home.donations.status.title') }}</th>
             <th>{{ $t('pages.patient.home.donations.table.approval.title') }}</th>
             <th>{{ $t('pages.patient.home.donations.table.createdAt') }}</th>
             <th>{{ $t('pages.patient.home.donations.table.actions') }}</th>
@@ -30,8 +30,8 @@
         </thead>
         <tbody>
           <tr v-for="donation in donationsRequests" :key="donation.id">
-            <td>{{ $t(`pages.patient.home.donations.table.type.${donation.type}`) }}</td>
-            <td>{{ $t(`pages.patient.home.donations.table.status.${donation.status}`) }}</td>
+            <td>{{ $t(`pages.patient.home.donations.type.${donation.type}`) }}</td>
+            <td>{{ $t(`pages.patient.home.donations.status.${donation.status}`) }}</td>
             <td>
               {{
                 donation.status === PreDonationStatus.FINISHED
@@ -45,7 +45,7 @@
                 variant="text"
                 icon="mdi-eye"
                 size="small"
-                @click="router.push(`/patient/pre-donation/${donation.id}`)"
+                @click="router.push(`/patient/pre-donations/${donation.id}`)"
               />
             </td>
           </tr>

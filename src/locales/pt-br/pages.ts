@@ -19,17 +19,6 @@ export default {
         create: 'Solicitar doação',
         hasNoPreDonations: 'Você ainda não possui nenhuma solicitação de doação.',
         table: {
-          type: {
-            title: 'Tipo',
-            blood: 'Sangue',
-            milk: 'Leite',
-          },
-          status: {
-            title: 'Status',
-            starting: 'Iniciando',
-            inProgress: 'Em progresso',
-            finished: 'Finalizada',
-          },
           approval: {
             title: 'Aprovação',
             true: 'Aprovado',
@@ -39,7 +28,36 @@ export default {
           doctor: 'Médico(a) responsável',
           createdAt: 'Solicitado em',
           actions: 'Ações',
-        }
+        },
+        type: {
+          title: 'Tipo',
+          blood: 'Sangue',
+          milk: 'Leite',
+        },
+        status: {
+          title: 'Status',
+          starting: 'Iniciando',
+          inProgress: 'Em progresso',
+          finished: 'Finalizada',
+        },
+      }
+    },
+    preDonation: {
+      details: {
+        title: 'Detalhes da solicitação',
+        subtitle: 'Veja os detalhes da sua solicitação de doação.',
+        isEligibility: 'Pode realizar a doação?',
+        underAnalysis: 'Em análise',
+        true: 'Sim',
+        false: 'Não',
+        performedNecessaryTests: 'Realizou os testes necessários?',
+        testNotes: 'Observações dos testes',
+        fullTestLink: 'Teste completo',
+        fullTestLinkLabel: 'Abrir teste completo',
+        doctor: 'Médico(a) responsável',
+        createdAt: 'Solicitado em',
+        updatedAt: 'Última atualização',
+        hasNoDoctor: 'Nenhum médico(a) responsável ainda',
       }
     }
   },
