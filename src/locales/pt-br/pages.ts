@@ -40,6 +40,20 @@ export default {
           inProgress: 'Em progresso',
           finished: 'Finalizada',
         },
+      },
+      requestDonation: {
+        title: 'Realizar nova doação',
+        message: 'Ficamos extremamente felizes que você deseja salvar vidas! Antes de continuar, você tem certeza que deseja continuar? Ao confirmar, você concorda que está apto para realizar a doação e que está ciente dos riscos que a doação pode causar. Omitir essa informações pode causar problemas futuros de saúde publica, além de processos judiciais, além do banimento da plataforma.',
+        close: 'Fechar',
+        confirm: 'Confirmar',
+        type: {
+          title: 'Tipo de doação',
+          blood: 'Sangue',
+          milk: 'Leite materno',
+        },
+        toast: {
+          success: 'Solicitação de doação criada com sucesso!',
+        }
       }
     },
     preDonation: {
