@@ -24,7 +24,13 @@ const menu: Menu[] = [
     "localeKey": "adminMenu.entities",
     "icon": "mdi-hospital-building",
     "route": "/admin/entities"
-  }
+  },
+  {
+    "id": "pre-donations",
+    "localeKey": "adminMenu.preDonations",
+    "icon": "mdi-hand-coin",
+    "route": "/admin/pre-donations"
+  },
 ]
 
 export default menu;

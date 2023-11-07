@@ -84,6 +84,18 @@ export const routes = [
             component: () => import('../views/Admin/Nurses/Create/CreateView.vue')
           },
         ]
+      },
+      {
+        path: 'pre-donations',
+        name: 'admin-pre-donations',
+        component: () => import('../views/Admin/PreDonation/PreDonationView.vue'),
+        children: [
+          {
+            path: '',
+            name: 'admin-pre-donations-home',
+            component: () => import('../views/Admin/PreDonation/Home/HomeView.vue'),
+          }
+        ]
       }
     ]
   }

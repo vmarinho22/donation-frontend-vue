@@ -130,6 +130,13 @@ export default {
         no: 'Não',
         notDisabled: 'Não desativado',
       },
+    },
+    preDonation: {
+      hasNoPreDonations: 'Nenhuma solicitação de doação encontrada.',
+      table: {
+        id: 'ID',
+        needsAttention: 'Precisa de atenção',
+      }
     }
   }
 }

@@ -12,5 +12,6 @@ export default {
     doctors: 'Médicos(as)',
     nurses: 'Enfermeiros(as)',
     entities: 'Entidades',
+    preDonations: 'Pré-doações',
   }
 }
