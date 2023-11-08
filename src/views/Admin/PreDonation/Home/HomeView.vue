@@ -37,7 +37,7 @@
             <td>
               <v-btn
                 variant="text"
-                icon="mdi-eye"
+                icon="mdi-pencil"
                 size="small"
                 @click="router.push(`/admin/pre-donations/${preDonation.id}`)"
               />

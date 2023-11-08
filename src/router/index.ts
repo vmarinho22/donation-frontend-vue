@@ -94,6 +94,11 @@ export const routes = [
             path: '',
             name: 'admin-pre-donations-home',
             component: () => import('../views/Admin/PreDonation/Home/HomeView.vue'),
+          },
+          {
+            path: ':id',
+            name: 'admin-pre-donations-details',
+            component: () => import('../views/Admin/PreDonation/Details/DetailsView.vue'),
           }
         ]
       }

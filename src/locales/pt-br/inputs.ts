@@ -252,4 +252,14 @@ export default {
       invalid: 'CORENs inválido',
     }
   },
+  preDonation: {
+    status: {
+      label: 'Status',
+      items: {
+        starting: 'Iniciando',
+        inProgress: 'Em progresso',
+        finished: 'Finalizada',
+      }
+    }
+  }
 }

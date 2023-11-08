@@ -37,7 +37,7 @@ export default {
         status: {
           title: 'Status',
           starting: 'Iniciando',
-          inProgress: 'Em progresso',
+          in_progress: 'Em progresso',
           finished: 'Finalizada',
         },
       },
@@ -136,6 +136,10 @@ export default {
       table: {
         id: 'ID',
         needsAttention: 'Precisa de atenção',
+      },
+      details: {
+        title: 'Detalhes da solicitação',
+        subtitle: 'Veja os detalhes da solicitação de doação.',
       }
     }
   }
