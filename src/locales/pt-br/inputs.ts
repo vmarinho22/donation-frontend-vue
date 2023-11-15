@@ -260,6 +260,8 @@ export default {
         inProgress: 'Em progresso',
         finished: 'Finalizada',
       }
-    }
-  }
+    },
+    approval: 'Aprovação',
+  },
+  responsibleDoctor: 'Médico(a) responsável',
 }

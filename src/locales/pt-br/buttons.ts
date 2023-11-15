@@ -4,4 +4,7 @@ export default {
   advance: 'Avançar',
   finish: 'Finalizar',
   send: 'Enviar',
+  edit: 'Editar',
+  cancel: 'Cancelar',
+  save: 'Salvar',
 }

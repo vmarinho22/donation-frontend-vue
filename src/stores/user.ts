@@ -1,8 +1,8 @@
 import { defineStore } from 'pinia'
-import type { User } from '@/types/user'
+import type { Profile } from '@/types/profiles'
 import { ref } from 'vue'
 
-export const initialState: User = {
+export const initialState: Profile = {
   id: '',
   firstName: '',
   lastName: '',
@@ -28,9 +28,9 @@ export const initialState: User = {
 
 
 export const useUser = defineStore('user', () => {
-  const user = ref<User>(initialState)
+  const user = ref<Profile>(initialState)
 
-  function updateUser(userPartialData: Partial<User>) {
+  function updateUser(userPartialData: Partial<Profile>) {
     user.value = Object.assign(user.value, userPartialData)
   }
 

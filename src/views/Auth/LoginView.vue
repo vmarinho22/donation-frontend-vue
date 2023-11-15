@@ -46,7 +46,7 @@ import { ref } from 'vue'
 import { Colors } from '@/constants/colors'
 import { useAuth } from '@/stores/auth'
 import { useUser } from '@/stores/user'
-import type { User } from '@/types/user'
+import type { Profile } from '@/types/profiles'
 import api from '@/utils/api'
 import { useI18n } from 'vue-i18n'
 import { useToast } from 'vue-toast-notification'
@@ -67,7 +67,7 @@ async function onSignIn() {
     loading.value = true
     const userId = await signIn()
 
-    const userData = await api.get<User>(`/profiles/full/${userId}`)
+    const userData = await api.get<Profile>(`/profiles/full/${userId}`)
 
     updateUser({ ...userData.data, id: userId })
 

@@ -132,6 +132,7 @@ export default {
       },
     },
     preDonation: {
+      patient: 'Paciente',
       hasNoPreDonations: 'Nenhuma solicitação de doação encontrada.',
       table: {
         id: 'ID',
@@ -140,6 +141,7 @@ export default {
       details: {
         title: 'Detalhes da solicitação',
         subtitle: 'Veja os detalhes da solicitação de doação.',
+        success: 'Solicitação de doação atualizada com sucesso!',
       }
     }
   }
