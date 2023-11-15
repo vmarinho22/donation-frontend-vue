@@ -1,4 +1,25 @@
 export default {
+  home: {
+    hint: 'Uma prioridade',
+    title: 'Salve vidas doando',
+    subtitle: 'leite materno e sangue',
+    text: 'As doações são fundamentais para o suprimento de componentes sanguíneos vitais, e para a nutrição de recém-nascidos prematuros e bebês com dificuldades de amamentação',
+    security: 'Seus dados estão seguros e não serão compartilhados com ninguém.',
+    benefits: {
+      security: {
+        title: 'Segurança',
+        text: 'Seus dados estão seguros e não serão compartilhados com ninguém.',
+      },
+      speed: {
+        title: 'Rapidez',
+        text: 'Um processo simples e 100% informatizado',
+      },
+      gratitude: {
+        title: 'Gratidão',
+        text: 'Você ajudará a salvar vidas!',
+      }
+    }
+  },
   signup: {
     title: 'Vamos começar?',
     subtitle: 'Crie sua conta para começar a salvar vidas.',

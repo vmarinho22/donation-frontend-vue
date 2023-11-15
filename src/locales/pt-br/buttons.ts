@@ -7,4 +7,5 @@ export default {
   edit: 'Editar',
   cancel: 'Cancelar',
   save: 'Salvar',
+  signup: 'Cadastrar',
 }
