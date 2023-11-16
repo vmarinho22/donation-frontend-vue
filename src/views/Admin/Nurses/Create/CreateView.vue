@@ -78,7 +78,11 @@ async function createNurse() {
       userId: createdUser.data.userId
     })
 
-    toast.success(t('pages.admin.nurses.create.success'))
+    toast.success(t('pages.admin.nurses.create.success', { password: userParams.password }), {
+      duration: 10000,
+      pauseOnHover: true,
+      dismissible: true
+    })
 
     clearAllData()
 

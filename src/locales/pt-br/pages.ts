@@ -123,7 +123,7 @@ export default {
         },
       },
       create: {
-        success: 'Médico(a) criado(a) com sucesso!',
+        success: 'Médico(a) criado(a) com sucesso! A senha provisória é: {password}',
       }
     },
     nurses: {
@@ -142,7 +142,7 @@ export default {
         },
       },
       create: {
-        success: 'Enfermeiro(a) criado(a) com sucesso!',
+        success: 'Enfermeiro(a) criado(a) com sucesso! A senha provisória é: {password}',
       },
     },
     actions: {
