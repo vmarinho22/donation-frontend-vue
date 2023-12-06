@@ -63,6 +63,12 @@ export const initialMedicalRecordState: MedicalRecord = {
   updatedAt: null
 }
 
+type RegisteredMedicalRecord = {
+  MedicalRecord: string
+}
+
+type UpdateMedicalRecord = Partial<Omit<MedicalRecord, 'id' | 'createdAt' | 'updatedAt'> | RegisteredMedicalRecord >;
+
 export const usePatient = defineStore(
   'patient',
   () => {
@@ -83,14 +89,13 @@ export const usePatient = defineStore(
     }
 
     function updateMedicalRecord(
-      medicalRecordPartialData: Partial<Omit<MedicalRecord, 'id' | 'createdAt' | 'updatedAt'>>
+      medicalRecordPartialData: UpdateMedicalRecord
     ) {
-      medicalRecord.value = Object.assign(medicalRecord.value, medicalRecordPartialData)
+      medicalRecord.value = Object.assign(medicalRecord.value, (medicalRecordPartialData as any)?.MedicalRecord ? { id: (medicalRecordPartialData as any).MedicalRecord as any } : medicalRecordPartialData)
     }
 
     async function fetchPatientDataByUserId(userId: string) {
       const patientData = await api.get<Patient>(`/patients/by-user/${userId}`).then(res => res.data)
-
       updatePatient(patientData)
     }
 

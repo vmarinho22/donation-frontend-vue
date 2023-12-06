@@ -103,7 +103,7 @@
 </template>
 
 <script setup lang="ts">
-import { onBeforeMount, ref } from 'vue'
+import { onBeforeMount, ref, watch } from 'vue'
 import RegisterSteps from '@/components/Pages/Patient/Register/RegisterSteps.vue'
 import { usePatient } from '@/stores/patient'
 import api from '@/utils/api'
@@ -141,13 +141,21 @@ const selectPreDonationRequestItens = computed(() => [
 const preDonationLoading = ref(false)
 
 onBeforeMount(async () => {
-  await fetchDonationsRequests()
-  loading.value = false
+  if(patient.id) {
+    await fetchDonationsRequests()
+    loading.value = false
+  }
 })
 
-async function fetchDonationsRequests() {
+watch(() => patient.id, async () => {
+  if(patient.id) {
+    await fetchDonationsRequests()
+    loading.value = false
+  }
+}, { immediate: true })
 
-  const { data } = await api.get<PreDonation[]>(`/donation-pre-ratings/by-patient/${patient.id}`)
+async function fetchDonationsRequests() {
+  const { data } = await api.get<PreDonation[]>(`/donation-pre-ratings/all/by-patient/${patient.id}`)
 
   donationsRequests.value = data
 }
