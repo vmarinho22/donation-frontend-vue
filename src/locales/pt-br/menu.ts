@@ -13,5 +13,9 @@ export default {
     nurses: 'Enfermeiros(as)',
     entities: 'Entidades',
     preDonations: 'Pré-doações',
+  },
+  doctorMenu: {
+    preDonation: 'Pré-doações',
+    donations: 'Doações',
   }
 }

@@ -268,7 +268,7 @@ async function saveChanges() {
       doctorId: preDonationDetails.value.doctorId
     })
     changeEditableMode()
-    toast.success(t('pages.patient.preDonation.details.success'))
+    toast.success(t('pages.admin.preDonation.details.success'))
   } catch (error) {
     console.error(error)
     toast.error(t('genericMessages.errors.generic'))

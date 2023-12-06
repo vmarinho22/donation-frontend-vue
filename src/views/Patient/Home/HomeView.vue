@@ -147,7 +147,7 @@ onBeforeMount(async () => {
 
 async function fetchDonationsRequests() {
 
-  const { data } = await api.get<PreDonation[]>(`/donation-pre-ratings/by-patient/${patient.id}`)
+  const { data } = await api.get<PreDonation[]>(`/donation-pre-ratings/all/by-patient/${patient.id}`)
 
   donationsRequests.value = data
 }
