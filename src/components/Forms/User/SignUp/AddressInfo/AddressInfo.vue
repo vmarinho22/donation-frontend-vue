@@ -176,13 +176,13 @@ const ufMaskOptions = { mask: '@@' }
 
 const loadingPostalCode = ref(false)
 
-watch(address, async (newValue) => {
+watch(() => address.postalCode, async (newValue) => {
   if (
-    newValue.postalCode.length === 9 &&
+    newValue.length === 9 &&
     !loadingPostalCode.value
   ) {
     loadingPostalCode.value = true
-    const parsedPostalCode = Number(newValue.postalCode.replace('-', ''))
+    const parsedPostalCode = Number(newValue.replace('-', ''))
 
     const response = await axios
       .get<IBGEAddressApiReturn>(`https://brasilaberto.com/api/v1/zipcode/${parsedPostalCode}`, {

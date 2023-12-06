@@ -31,7 +31,10 @@ type CreatedUserApiReturn = {
 const steps = [
   {
     title: 'Conta',
-    component: UserInfo
+    component: UserInfo,
+    props: {
+      showPasswordInput: true
+    }
   },
   {
     title: 'Perfil',
@@ -66,7 +69,7 @@ async function onFinishSignUp() {
     })
 
     localStorage.setItem('access_token', createdUser.data.token)
-
+    
     const userData = await api.get<Profile>(`/profiles/full/${createdUser.data.userId}`)
 
     updateUser({ ...userData.data, id: createdUser.data.userId })
