@@ -1,5 +1,3 @@
-import type { User } from '@/types/user'
-
 const mockedUser = {
   id: '1',
   firstName: 'John',
@@ -22,6 +20,6 @@ const mockedUser = {
   },
   photoUrl: '',
   role: 'patient'
-} as User
+} as any
 
 export default mockedUser
