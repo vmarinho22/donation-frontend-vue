@@ -33,10 +33,16 @@ const router = createRouter({
 
 const routesWithoutAuth = ['home', 'login', 'signup']
 
-router.beforeEach((to, from, next) => {
-  const user = JSON.parse(localStorage.getItem('user') || '{}')
-  if (!routesWithoutAuth.includes(to.name as string) && !user.id) next({ name: 'login' })
-  else next()
+router.beforeEach((to) => {
+  const { user } = JSON.parse(localStorage.getItem('user') || '{}')
+  const token = localStorage.getItem('access_token')
+
+  const isAuthenticated = Boolean(user?.id && token)
+
+  if (!isAuthenticated && !routesWithoutAuth.includes(to.name as string) && to.name !== 'login') {
+    // redirect the user to the login page
+    return { name: 'login' }
+  }
 })
 
 export default router
