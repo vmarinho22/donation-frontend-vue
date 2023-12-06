@@ -15,7 +15,7 @@
       <v-btn variant="text" :disabled="currentStep === 0" @click="back">
         {{ $t('buttons.back') }}
       </v-btn>
-      <v-btn :color="Colors.bloodRed[500]" @click="advance">
+      <v-btn :color="Colors.bloodRed[500]" @click="advance" :loading="loading">
         {{ currentStep === steps.length - 1 ? $t('buttons.finish') : $t('buttons.advance') }}
       </v-btn>
     </v-row>
@@ -35,10 +35,11 @@ type LinearStepperProps = {
 
 const { steps, onFinish } = defineProps<{
   steps: LinearStepperProps[];
-  onFinish: () => void;
+  onFinish: () => Promise<void>;
 }>()
 
 const currentStep = ref(0)
+const loading = ref(false)
 
 const component = computed<Component>(() => steps[currentStep.value].component)
 
@@ -46,11 +47,13 @@ function setStep(index: number) {
   currentStep.value = index
 }
 
-function advance() {
+async function advance() {
   if (currentStep.value < steps.length - 1) {
     currentStep.value += 1
   } else if (currentStep.value === steps.length - 1) {
-    onFinish();
+    loading.value = true
+    await onFinish();
+    loading.value = false
   }
 }
 
