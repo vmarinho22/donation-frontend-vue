@@ -3,6 +3,7 @@
 </template>
 
 <script setup lang="ts">
+import { onBeforeMount } from 'vue'
 import LinearStepper from '@/components/Steppers/LinearStepper/LinearStepper.vue'
 import StepOne from './StepOne.vue'
 import StepTwo from './StepTwo.vue'
@@ -30,6 +31,10 @@ const steps = [
     component: StepTwo
   }
 ]
+
+onBeforeMount(async () => {
+  localStorage.removeItem('patient')
+})
 
 async function onFinishSignUp() {
   try {
