@@ -31,7 +31,7 @@ describe('LinearStepper', () => {
       },
       props: {
         steps,
-        onFinish: () => {}
+        onFinish: async () => {}
       }
     })
     expect(wrapper.html()).toMatchSnapshot();
