@@ -31,4 +31,12 @@ const router = createRouter({
   routes
 })
 
+const routesWithoutAuth = ['home', 'login', 'signup']
+
+router.beforeEach((to, from, next) => {
+  const user = JSON.parse(localStorage.getItem('user') || '{}')
+  if (!routesWithoutAuth.includes(to.name as string) && !user.id) next({ name: 'login' })
+  else next()
+})
+
 export default router
