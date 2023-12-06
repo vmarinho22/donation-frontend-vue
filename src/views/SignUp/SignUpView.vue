@@ -14,7 +14,6 @@ import LinearStepper from '@/components/Steppers/LinearStepper/LinearStepper.vue
 import { useSignUp } from '@/stores/signup'
 import { useUser } from '@/stores/user'
 import api from '@/utils/api'
-import type { User } from '@/types/user'
 import { useToast } from 'vue-toast-notification'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
@@ -22,6 +21,7 @@ import { useRouter } from 'vue-router'
 import UserInfo from '@/components/Forms/User/SignUp/UserInfo/UserInfo.vue'
 import ProfileInfo from '@/components/Forms/User/SignUp/ProfileInfo/ProfileInfo.vue'
 import AddressInfo from '@/components/Forms/User/SignUp/AddressInfo/AddressInfo.vue'
+import type { Profile } from '@/types/profiles'
 
 type CreatedUserApiReturn = {
   token: string
@@ -67,7 +67,7 @@ async function onFinishSignUp() {
 
     localStorage.setItem('access_token', createdUser.data.token)
 
-    const userData = await api.get<User>(`/profiles/full/${createdUser.data.userId}`)
+    const userData = await api.get<Profile>(`/profiles/full/${createdUser.data.userId}`)
 
     updateUser({ ...userData.data, id: createdUser.data.userId })
 
