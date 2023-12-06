@@ -31,7 +31,10 @@ type CreatedUserApiReturn = {
 const steps = [
   {
     title: 'Conta',
-    component: UserInfo
+    component: UserInfo,
+    props: {
+      showPasswordInput: true
+    }
   },
   {
     title: 'Perfil',
