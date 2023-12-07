@@ -12,8 +12,10 @@ export const inputValidations = {
     const parsedValue = z
       .string({
         required_error: labels.required,
-        invalid_type_error: labels.required
+        invalid_type_error: labels.required,
+
       })
+      .min(1, { message: labels.required })
       .safeParse(value)
 
     if (!parsedValue.success) {

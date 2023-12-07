@@ -22,6 +22,7 @@ import UserInfo from '@/components/Forms/User/SignUp/UserInfo/UserInfo.vue'
 import ProfileInfo from '@/components/Forms/User/SignUp/ProfileInfo/ProfileInfo.vue'
 import AddressInfo from '@/components/Forms/User/SignUp/AddressInfo/AddressInfo.vue'
 import type { Profile } from '@/types/profiles'
+import { messageFormatter } from '@/utils/messageFormatter'
 
 type CreatedUserApiReturn = {
   token: string
@@ -79,7 +80,8 @@ async function onFinishSignUp() {
     router.push('/patient')
   } catch (error) {
     console.error(error)
-    toast.error(t('genericMessages.errors.generic'))
+
+    toast.error(messageFormatter.axiosReturn(t, error))
   }
 }
 </script>

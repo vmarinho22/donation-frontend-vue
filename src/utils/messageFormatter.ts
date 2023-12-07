@@ -12,6 +12,19 @@ export const messageFormatter = {
         case 400:
           message = error.response?.data.message
           break
+        case 500: 
+          try {
+            message = error.response?.data.message
+            const errorData = JSON.parse(error.response?.data.message)
+            if (errorData.every((error: any) => 'code' in error)) {
+              message = t('genericMessages.errors.wrongInputValues')
+            } else {
+              message = t('genericMessages.errors.generic')
+            }
+          } catch {
+            message = t('genericMessages.errors.generic')
+          }
+          break;
         default:
           message = t('genericMessages.errors.generic')
           break
